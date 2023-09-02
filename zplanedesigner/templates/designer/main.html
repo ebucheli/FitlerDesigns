@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Designer{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+  <form method="post">
+    <label for="zero_1_x">Zero 1: re</label>
+    <input name="zero_1_x" id="zero_1_x" required>
+    <label for="zero_1_y">Zero 1: im</label>
+    <input name="zero_1_y" id="zero_1_y" required>
+    <label for="pole_1_x">Pole 1: re</label>
+    <input name="pole_1_x" id="pole_1_x" required>
+    <label for="pole_1_y">Pole 1: im</label>
+    <input name="pole_1_y" id="pole_1_y" required>
+    <input type="submit" value="Register">
+  </form>
+
+
+  <!-- <img src="/media/" alt=""> -->
+
+  <img src="{{url_for('static', filename='z_plane.png')}}" align="middle" />
+  <img src="{{url_for('static', filename='freq_resp.png')}}" align="middle" />
+
+{% endblock %}
